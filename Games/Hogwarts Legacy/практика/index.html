@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WawePlay - Магазин Ігор</title>
+<link rel="icon" type="image/png" href="logo2.png">
+    <link rel="stylesheet" href="index.css">
+       </head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <img src="1main\logo.png" alt="WawePlay Logo" class="logo">
+            <nav class="center-nav">
+                <a href="#">Ігри</a>
+                <a href="#">Категорії</a>
+                <a href="#">Акції</a>
+            </nav>
+            <button class="cart-button">
+                <img src="1main\cart.png" alt="Іконка кошика">
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-section">
+            <h1>Відкрийте для себе дивовижні ігри</h1>
+            <p>Знаходьте найкращі пропозиції в різних магазинах і читайте чесні відгуки від ігрової спільноти. Ваша наступна улюблена гра — всього за один клік!</p>
+        </section>
+        
+        <hr>
+
+        <section class="bestsellers-section">
+            <h2>
+                Бестселери>
+            </h2>
+            <div class="games-grid-container">
+                <div class="games-grid">
+                    </div>
+                <a href="#" class="more-button">
+                    Більше →
+                </a>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="features-section">
+            <h2>Чому обирають WawePlay?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">
+                        <img src="1main\best_price.png" alt="Іконка цін">
+                    </div>
+                    <h3>Найкращі ціни</h3>
+                    <p>Порівнюйте ціни в різних магазинах, щоб знайти найкращі пропозиції на улюблені ігри.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <img src="1main\review.png" alt="Іконка відгуків">
+                    </div>
+                    <h3>Чесні відгуки</h3>
+                    <p>Читайте справжні відгуки від реальних гравців, щоб ухвалювати зважені рішення про покупку.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <img src="1main\game.png" alt="Іконка ігор">
+                    </div>
+                    <h3>Нові ігри</h3>
+                    <p>Будьте в курсі останніх релізів та найактуальніших ігор в ігровій індустрії.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="free-games-section">
+            <div class="free-games-header">
+                <h2>
+                    <img src="1main\gift.png" alt="Іконка подарунка">
+                    Безкоштовні ігри
+                </h2>
+                <img src="1main\timer.png" alt="Іконка таймера" class="timer-icon">
+            </div>
+            <div class="free-games-grid">
+                <a href="Games/Ghostrunner 2/Ghostrunner 2.html" class="game-card free-game-card">
+                    <img src="1main\Ghostrunner 2.jpg" alt="Ghostrunner 2">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.5</span>
+                        <span class="category-tag">Екшн</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Ghostrunner 2</h3>
+                            <p>2023</p>
+                            <span class="free-date">Безкоштовно з 11 по 18 вересня</span>
+                        </div>
+                        <button class="add-button" data-name="Ghostrunner 2" data-year="2023" data-image="1main\Ghostrunner 2.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/Monument Valley II/Monument Valley II.html" class="game-card free-game-card">
+                    <img src="1main\monument.jpg" alt="Monument Valley II">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.5</span>
+                        <span class="category-tag">Головоломка</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Monument Valley II</h3>
+                            <p>2022</p>
+                            <span class="free-date">Безкоштовно з 11 по 18 вересня</span>
+                        </div>
+                        <button class="add-button" data-name="Monument Valley II" data-year="2022" data-image="1main\monument.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/The Battle of Polytopia/The Battle of Polytopia.html" class="game-card free-game-card">
+                    <img src="1main\polytopia.jpg" alt="The Battle of Polytopia">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.4</span>
+                        <span class="category-tag">Покрокова стратегія</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>The Battle of Polytopia</h3>
+                            <p>2020</p>
+                            <span class="free-date">Безкоштовно з 11 по 18 вересня</span>
+                        </div>
+                        <button class="add-button" data-name="The Battle of Polytopia" data-year="2020" data-image="1main\polytopia.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="play-instantly-section">
+            <h2>
+                <img src="1main\rocket.png" alt="Іконка ракети" class="rocket-icon">
+                Миттєва гра з WavePlay
+            </h2>
+            <p>Оберіть гру та завантажте її безпосередньо від розробників **безкоштовно**. Жодних зайвих кроків – лише ви та ваші улюблені ігри!</p>
+            <div class="play-instantly-grid">
+                <a href="Games/Genshin Impact/Genshin Impact.html" class="game-card">
+                    <img src="1main\genshin.jpg" alt="Genshin Impact">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.7</span>
+                        <span class="category-tag">Пригоди</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Genshin Impact</h3>
+                            <p>2021</p>
+                        </div>
+                        <button class="add-button" data-name="Genshin Impact" data-year="2021" data-image="1main\genshin.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/Zenless Zone Zero/Zenless Zone Zero.html" class="game-card">
+                    <img src="1main\zzz.jpg" alt="Zenless Zone Zero">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.6</span>
+                        <span class="category-tag">Екшн</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Zenless Zone Zero</h3>
+                            <p>2024</p>
+                        </div>
+                        <button class="add-button" data-name="Zenless Zone Zero" data-year="2024" data-image="1main\zzz.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/League of Legends/League of Legends.html" class="game-card">
+                    <img src="1main\lol.jpg" alt="League of Legends">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.2</span>
+                        <span class="category-tag">Екшн</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>League of Legends</h3>
+                            <p>2009</p>
+                        </div>
+                        <button class="add-button" data-name="League of Legends" data-year="2009" data-image="1main\lol.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/Valorant/Valorant.html" class="game-card">
+                    <img src="1main\valorant.jpg" alt="Valorant">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.5</span>
+                        <span class="category-tag">Шутер</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Valorant</h3>
+                            <p>2020</p>
+                        </div>
+                        <button class="add-button" data-name="Valorant" data-year="2020" data-image="1main\valorant.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/Path of Exile/Path of Exile.html" class="game-card">
+                    <img src="1main\exile.jpg" alt="Path of Exile">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.8</span>
+                        <span class="category-tag">Темне фентезі</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Path of Exile</h3>
+                            <p>2013</p>
+                        </div>
+                        <button class="add-button" data-name="Path of Exile" data-year="2013" data-image="1main\exile.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/Wuthering Waves/Wuthering Waves.html" class="game-card">
+                    <img src="1main\wuwa.jpg" alt="Wuthering Waves">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.6</span>
+                        <span class="category-tag">РПГ</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Wuthering Waves</h3>
+                            <p>2024</p>
+                        </div>
+                        <button class="add-button" data-name="Wuthering Waves" data-year="2024" data-image="1main\wuwa.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="action-open-world-section">
+            <h2>Екшн / Відкритий світ</h2>
+            <div class="action-open-world-grid">
+                <a href="Games/Grand Theft Auto V/Grand Theft Auto V.html" class="game-card">
+                    <img src="1main\gta.jpg" alt="Grand Theft Auto V Enhanced">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.6</span>
+                        <span class="category-tag enhanced">Оновлена</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Grand Theft Auto V Enhanced</h3>
+                            <p>2025</p>
+                        </div>
+                        <button class="add-button" data-name="Grand Theft Auto V Enhanced" data-year="2025" data-image="1main\gta.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/Marvels Spider-Man 2/Marvels Spider-Man 2.html" class="game-card">
+                    <img src="1main\spider2.jpg" alt="Marvel's Spider-Man 2">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.7</span>
+                        <span class="category-tag">Екшн</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Marvel's Spider-Man 2</h3>
+                            <p>2025</p>
+                        </div>
+                        <button class="add-button" data-name="Marvel's Spider-Man 2" data-year="2025" data-image="1main\spider2.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/Red Dead Redemption 2/Red Dead Redemption 2.html" class="game-card">
+                    <img src="1main\rdr2.jpg" alt="Red Dead Redemption 2">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.9</span>
+                        <span class="category-tag">Відкритий світ</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Red Dead Redemption 2</h3>
+                            <p>2019</p>
+                        </div>
+                        <button class="add-button" data-name="Red Dead Redemption 2" data-year="2019" data-image="1main\rdr2.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/Assassins Creed Valhalla/Assassins Creed Valhalla.html" class="game-card">
+                    <img src="1main\assasin.jpg" alt="Assassin's Creed Valhalla">
+                    <div class="overlay">
+                        <span class="rating">⭐ 3.3</span>
+                        <span class="category-tag">Відкритий світ</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Assassin's Creed Valhalla</h3>
+                            <p>2020</p>
+                        </div>
+                        <button class="add-button" data-name="Assassin's Creed Valhalla" data-year="2020" data-image="1main\assasin.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="looter-shooters-section">
+            <h2>Лутер-шутери / Кооператив</h2>
+            <div class="looter-shooters-grid">
+                <a href="Games/Borderlands 3/Borderlands 3.html" class="game-card">
+                    <img src="1main\borderlands3.jpg" alt="Borderlands 3">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.7</span>
+                        <span class="category-tag">Екшн</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Borderlands 3</h3>
+                            <p>2019</p>
+                        </div>
+                        <button class="add-button" data-name="Borderlands 3" data-year="2019" data-image="1main\borderlands3.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/Destiny 2/Destiny 2.html" class="game-card">
+                    <img src="1main\destiny.jpg" alt="Destiny 2">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.4</span>
+                        <span class="category-tag">Кооператив</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Destiny 2</h3>
+                            <p>2017</p>
+                        </div>
+                        <button class="add-button" data-name="Destiny 2" data-year="2017" data-image="1main\destiny.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/Tom Clancys/Tom Clancys.html" class="game-card">
+                    <img src="1main\tom.jpg" alt="Tom Clancy's The Division 2 - Gold Edition">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.5</span>
+                        <span class="category-tag">Шутер</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Tom Clancy's The Division 2 - Gold Edition</h3>
+                            <p>2025</p>
+                        </div>
+                        <button class="add-button" data-name="Tom Clancy's The Division 2 - Gold Edition" data-year="2025" data-image="1main\tom.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="rpg-adventure-section">
+            <h2>РПГ / Пригоди</h2>
+            <div class="rpg-adventure-grid">
+                <a href="Games/The Witcher 3/The Witcher 3.html" class="game-card">
+                    <img src="1main\witcher3.jpg" alt="The Witcher 3: Wild Hunt - Complete Edition">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.9</span>
+                        <span class="category-tag">РПГ</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>The Witcher 3: Wild Hunt - Complete Edition</h3>
+                            <p>2020</p>
+                        </div>
+                        <button class="add-button" data-name="The Witcher 3: Wild Hunt - Complete Edition" data-year="2020" data-image="1main\witcher3.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/Horizon Zero Dawn™ Remastered/Horizon Zero Dawn™ Remastered.html" class="game-card">
+                    <img src="1main\horizon.jpg" alt="Horizon Zero Dawn™ Remastered">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.4</span>
+                        <span class="category-tag">Пригоди</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Horizon Zero Dawn™ Remastered</h3>
+                            <p>2024</p>
+                        </div>
+                        <button class="add-button" data-name="Horizon Zero Dawn™ Remastered" data-year="2024" data-image="1main\horizon.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Cyberpunk 2077.html" class="game-card">
+                    <img src="1main\cyberpunk.jpg" alt="Cyberpunk 2077">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.7</span>
+                        <span class="category-tag">Екшн</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Cyberpunk 2077</h3>
+                            <p>2020</p>
+                        </div>
+                        <button class="add-button" data-name="Cyberpunk 2077" data-year="2020" data-image="1main\cyberpunk.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="shooters-section">
+            <h2>Шутери / Королівська битва</h2>
+            <div class="shooters-grid">
+                <a href="Games/Fortnite/Fortnite.html" class="game-card">
+                    <img src="1main\fortnite.jpg" alt="Fortnite">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.3</span>
+                        <span class="category-tag">Шутер</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Fortnite</h3>
+                            <p>2017</p>
+                        </div>
+                        <button class="add-button" data-name="Fortnite" data-year="2017" data-image="1main\fortnite.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/Apex Legends/Apex Legends.html" class="game-card">
+                    <img src="1main\apex.jpg" alt="Apex Legends">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.3</span>
+                        <span class="category-tag">Шутер</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Apex Legends</h3>
+                            <p>2019</p>
+                        </div>
+                        <button class="add-button" data-name="Apex Legends" data-year="2019" data-image="1main\apex.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+                <a href="Games/Valorant/Valorant.html" class="game-card">
+                    <img src="1main\valorant.jpg" alt="Valorant">
+                    <div class="overlay">
+                        <span class="rating">⭐ 4.5</span>
+                        <span class="category-tag">Шутер</span>
+                    </div>
+                    <div class="game-info">
+                        <div class="details">
+                            <h3>Valorant</h3>
+                            <p>2020</p>
+                        </div>
+                        <button class="add-button" data-name="Valorant" data-year="2020" data-image="1main\valorant.jpg" onclick="event.stopPropagation(); event.preventDefault();">+</button>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo-left">
+                <img src="1main\logo2.png" alt="WawePlay Logo 2">
+            </div>
+            <div class="footer-text">
+                <p>© 2025 WawePlay Corporation. Усі права захищено. Усі торговельні марки є власністю відповідних власників в Україні та інших країнах.</p>
+                <p>Усі ціни вказані з урахуванням ПДВ (за потреби).</p>
+            </div>
+            <div class="footer-logo-right">
+                <img src="1main\logo.png" alt="WawePlay Logo">
+            </div>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification"></div>
+
+    <div id="wishlist-popup" class="wishlist-popup">
+        <button class="close-btn">&times;</button>
+        <h2>Список бажаного</h2>
+        <div id="wishlist-items">
+            <p id="wishlist-empty-message" class="wishlist-empty-message">Ваш список бажаного порожній.</p>
+        </div>
+        <div class="wishlist-popup-buttons">
+            
+            <button id="clear-wishlist-btn" class="clear-wishlist-btn">Очистити список</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    // JavaScript для списку бажаного
+    const wishlistPopup = document.querySelector('.wishlist-popup');
+    const closePopupBtn = document.querySelector('.wishlist-popup .close-btn');
+    const cartButton = document.querySelector('.cart-button');
+    const wishlistItemsContainer = document.getElementById('wishlist-items');
+    const notification = document.getElementById('notification');
+    const clearWishlistBtn = document.getElementById('clear-wishlist-btn');
+
+    // Нові елементи та масиви для секції "Бестселери"
+    const moreButton = document.querySelector('.more-button');
+    const gamesGrid = document.querySelector('.games-grid');
+    const bestsellersGames = [
+        { name: "Cyberpunk 2077", year: "2020", image: "1main/cyberpunk.jpg", rating: "4.7", category: "Екшн", path: "Cyberpunk 2077.html" },
+        { name: "Hogwarts Legacy", year: "2023", image: "1main/hogwarts.jpg", rating: "4.7", category: "Пригоди", path: "Hogwarts Legacy.html" },
+        { name: "MechWarrior 5", year: "2019", image: "1main/mechWarior.jpg", rating: "4.6", category: "Екшн", path: "MechWarrior 5.html" },
+        { name: "Borderlands 3", year: "2019", image: "1main/borderlands3.jpg", rating: "4.7", category: "Екшн", path: "Borderlands 3.html" },
+        { name: "Red Dead Redemption 2", year: "2019", image: "1main/rdr2.jpg", rating: "4.9", category: "Відкритий світ", path: "Red Dead Redemption 2.html" },
+        { name: "The Witcher 3", year: "2020", image: "1main/witcher3.jpg", rating: "4.9", category: "РПГ", path: "The Witcher 3.html" }
+    ];
+    let currentIndex = 0;
+
+    // База даних для зв'язку назв ігор із зображеннями
+    const gameImageMap = {
+        "Cyberpunk 2077": "cyberpunk.jpg",
+        "Red Dead Redemption 2": "rdr2.jpg",
+        "The Witcher 3: Wild Hunt - Complete Edition": "witcher3.jpg",
+        "Grand Theft Auto V Enhanced": "gta.jpg",
+        "Hogwarts Legacy": "hogwarts.jpg",
+        "Apex Legends": "apex.jpg",
+        "Assassin's Creed Valhalla": "assasin.jpg",
+        "Borderlands 3": "borderlands3.jpg",
+        "Destiny 2": "destiny.jpg",
+        "Path of Exile": "exile.jpg",
+        "Fortnite": "fortnite.jpg",
+        "Genshin Impact": "genshin.jpg",
+        "Ghostrunner 2": "Ghostrunner 2.jpg",
+        "Horizon Zero Dawn™ Remastered": "horizon.jpg",
+        "League of Legends": "lol.jpg",
+        "MechWarrior 5": "mechWarior.jpg",
+        "Monument Valley II": "monument.jpg",
+        "The Battle of Polytopia": "polytopia.jpg",
+        "Marvel's Spider-Man 2": "Spider2.jpg",
+        "Tom Clancy's The Division 2 - Gold Edition": "tom.jpg",
+        "Valorant": "valorant.jpg",
+        "Wuthering Waves": "wuwa.jpg",
+        "Zenless Zone Zero": "zzz.jpg"
+    };
+
+    let wishlist = [];
+
+    // Функція для збереження списку бажаного в локальне сховище
+    function saveWishlist() {
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    }
+
+    // Функція для завантаження списку бажаного з локального сховища
+    function loadWishlist() {
+        const storedWishlist = localStorage.getItem('wishlist');
+        if (storedWishlist) {
+            try {
+                wishlist = JSON.parse(storedWishlist);
+            } catch (e) {
+                console.error("Помилка при завантаженні списку бажаного з localStorage", e);
+                wishlist = [];
+            }
+        }
+    }
+
+    // Функція для оновлення відображення списку бажаного
+    function updateWishlistDisplay() {
+        wishlistItemsContainer.innerHTML = '';
+        if (wishlist.length === 0) {
+            wishlistItemsContainer.innerHTML = '<p class="wishlist-empty-message">Ваш список бажаного порожній.</p>';
+            return;
+        }
+        wishlist.forEach(gameName => {
+            const imageFileName = gameImageMap[gameName] || 'default.jpg';
+            const imagePath = `1main/${imageFileName}`;
+            
+            const wishlistItem = document.createElement('div');
+            wishlistItem.classList.add('wishlist-item');
+            wishlistItem.innerHTML = `
+                <img src="${imagePath}" alt="${gameName}">
+                <div class="wishlist-item-details">
+                    <h3>${gameName}</h3>
+                </div>
+                <button class="delete-btn" data-name="${gameName}">&times;</button>
+            `;
+            wishlistItemsContainer.appendChild(wishlistItem);
+        });
+    }
+
+    // Функція для додавання гри до списку бажаного
+    function addGameToWishlist(gameName) {
+        const gameExists = wishlist.includes(gameName);
+        if (!gameExists) {
+            wishlist.push(gameName);
+            saveWishlist();
+            showNotification(`Додано до списку бажаного: ${gameName}`);
+        } else {
+            showNotification(`Гра "${gameName}" вже у списку.`);
+        }
+        updateWishlistDisplay();
+    }
+
+    // Функція для видалення гри зі списку бажаного
+    function removeGameFromWishlist(gameName) {
+        wishlist = wishlist.filter(name => name !== gameName);
+        saveWishlist();
+        updateWishlistDisplay();
+    }
+    
+    // Функція для очищення списку бажаного
+    function clearWishlist() {
+        wishlist = [];
+        saveWishlist();
+        updateWishlistDisplay();
+        showNotification("Список бажаного очищено!");
+    }
+
+    // Функція для відображення повідомлення
+    function showNotification(message) {
+        notification.textContent = message;
+        notification.classList.add('show');
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 3000);
+    }
+    
+    const renderGames = (startIndex) => {
+        gamesGrid.innerHTML = '';
+        const gamesToShow = bestsellersGames.slice(startIndex, startIndex + 3);
+        
+        gamesToShow.forEach(game => {
+            const gameCard = document.createElement('a');
+            gameCard.classList.add('game-card');
+            gameCard.href = game.path;
+            gameCard.innerHTML = `
+                <img src="${game.image}" alt="${game.name}">
+                <div class="overlay">
+                    <span class="rating">⭐ ${game.rating}</span>
+                    <span class="category-tag">${game.category}</span>
+                </div>
+                <div class="game-info">
+                    <div class="details">
+                        <h3>${game.name}</h3>
+                        <p>${game.year}</p>
+                    </div>
+                    <button class="add-button" data-name="${game.name}" data-year="${game.year}" data-image="${game.image}">+</button>
+                </div>
+            `;
+            gamesGrid.appendChild(gameCard);
+        });
+
+        // Цей обробник подій потрібен тут, оскільки кнопки створюються динамічно
+        document.querySelectorAll('.add-button').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.stopPropagation();
+                event.preventDefault();
+                const gameName = button.dataset.name;
+                addGameToWishlist(gameName);
+            });
+        });
+    };
+
+    // Обробники подій
+    moreButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        gamesGrid.classList.add('slide-left');
+
+        setTimeout(() => {
+            currentIndex = (currentIndex + 3) % bestsellersGames.length;
+            renderGames(currentIndex);
+            gamesGrid.classList.remove('slide-left');
+        }, 500);
+    });
+
+    cartButton.addEventListener('click', () => {
+        wishlistPopup.classList.add('open');
+        updateWishlistDisplay();
+    });
+
+    closePopupBtn.addEventListener('click', () => {
+        wishlistPopup.classList.remove('open');
+    });
+    
+    wishlistItemsContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('delete-btn')) {
+            const gameName = event.target.dataset.name;
+            removeGameFromWishlist(gameName);
+        }
+    });
+
+    // Новий обробник для кнопки очищення списку
+    if (clearWishlistBtn) {
+        clearWishlistBtn.addEventListener('click', clearWishlist);
+    }
+    
+    // Завантажуємо дані при першому завантаженні сторінки
+    loadWishlist();
+    updateWishlistDisplay();
+    renderGames(currentIndex);
+});
+    </script>
+</body>
+</html>

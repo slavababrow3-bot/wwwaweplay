@@ -1,0 +1,762 @@
+ /* Глобальні стилі та кольори */
+        :root {
+            --bg-color: #EFFDFE;
+            --header-gradient-start: #CDF6DB;
+            --header-gradient-end: #32E0E0;
+            --primary-blue: #32E0E0;
+            --text-color: #555;
+            --card-bg: #fff;
+            --footer-text-color: #2F6D6D;
+            --border-color: #32E0E0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* --- Шапка сайту --- */
+        .header {
+            background: linear-gradient(to right, var(--header-gradient-start), var(--header-gradient-end));
+            height: 87px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: visible;
+        }
+
+        .header-container {
+            width: 1440px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .header .logo {
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 80px;
+        }
+
+        .center-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-grow: 1;
+            margin-left: 150px;
+        }
+
+        .center-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cart-button {
+            background-color: var(--card-bg);
+            border: none;
+            border-radius: 50px;
+            padding: 10px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-button img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* --- Основний контент --- */
+        .container {
+            width: 1440px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+
+        /* --- Секція Hero --- */
+        .hero-section {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .hero-section h1 {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-section p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* --- Секція Бестселери --- */
+        .bestsellers-section h2 {
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .games-grid-container {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            margin-left: 3rem;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .game-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+            padding-bottom: 1rem;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Стиль для обгортки GTA, щоб створити чорний фон */
+        .gta-image-wrapper {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            position: relative;
+        }
+
+        .gta-image-wrapper img {
+            width: 90%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .game-card .overlay {
+            position: absolute;
+            top: 10px;
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+            padding: 0 0.5rem;
+            z-index: 1;
+        }
+
+        .rating, .category-tag {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .category-tag {
+            background-color: var(--primary-blue);
+        }
+
+        .category-tag.enhanced {
+            background-color: #f7b32b;
+        }
+        
+        /* Нові стилі для Loote-Shooterts/Co-op та RPG/Adventure */
+        .looter-shooters-section h2, .rpg-adventure-section h2, .shooters-section h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .looter-shooters-grid, .rpg-adventure-grid, .shooters-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .game-info {
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 1rem;
+        }
+
+        .game-info .details h3 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .game-info .details p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .add-button {
+            background-color: #eee;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #777;
+            cursor: pointer;
+        }
+
+        .more-button {
+            background-color: var(--primary-blue);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        /* --- Секція "Чому ми" --- */
+        .features-section {
+            padding-top: 2rem;
+        }
+
+        .features-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border: 3px solid var(--primary-blue);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .feature-card .icon {
+            background-color: #eee;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card .icon img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .feature-card h3 {
+            color: var(--primary-blue);
+            margin: 0;
+        }
+        
+        .feature-card p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* --- Секція "Безкоштовні ігри --- */
+        .free-games-section {
+            background-color: var(--card-bg);
+            border: 3px solid var(--primary-blue);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .free-games-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .free-games-header h2 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .free-games-header h2 img {
+            height: 50px;
+        }
+
+        .free-games-header .timer-icon {
+            height: 40px;
+            margin-right: 0.5rem;
+        }
+
+        .free-games-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .free-game-card .details p {
+            font-size: 0.9rem;
+        }
+
+        .free-game-card .free-date {
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* --- Нова секція "Play Instantly with WavePlay" --- */
+        .play-instantly-section {
+            padding-top: 2rem;
+        }
+        
+        .play-instantly-section h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .play-instantly-section h2 .rocket-icon {
+            height: 25px;
+            width: auto;
+        }
+
+        .play-instantly-section p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            max-width: 700px;
+            margin-bottom: 2rem;
+        }
+
+        .play-instantly-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        /* --- Нова секція "Action / Open World" --- */
+        .action-open-world-section {
+            padding-top: 2rem;
+        }
+
+        .action-open-world-section h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .action-open-world-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        /* Стиль для обгортки GTA, щоб створити чорний фон */
+        .gta-image-wrapper {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            position: relative;
+        }
+
+        .gta-image-wrapper img {
+            width: 90%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+
+
+       /* --- Оновлені стилі для футера --- */
+        .footer {
+            width: 100%;
+            background: linear-gradient(to right, #CDF6DB, #32E0E0);
+            padding: 20px 0;
+            margin-top: 20px;
+
+        }
+
+        .footer-container {
+            width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+
+        .footer-logo {
+            height: 100px;
+        }
+
+        .footer-logo-right img {
+            width: 357px;
+            height: 91px;
+            
+        }
+
+        .footer-logo-left img {
+            width: 128px;
+            height: 119px;
+        }
+
+        .footer-text {
+            text-align: center;
+            color: #000;
+            font-size: 18px;
+            line-height: 1.5;
+            font-weight: bold;
+            flex-grow: 1;
+            padding: 0 20px;
+        }
+
+
+
+
+
+
+        
+        /* --- СТИЛІ ДЛЯ ПОВІДОМЛЕННЯ ТА СПИСКУ БАЖАНОГО --- */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-blue);
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            z-index: 1000;
+        }
+
+        .notification.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .wishlist-popup {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 400px;
+            background-color: #fff;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            transform: translateX(100%);
+            transition: transform 0.4s ease-in-out;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .wishlist-popup.open {
+            transform: translateX(0);
+        }
+
+        .wishlist-popup h2 {
+            color: var(--primary-blue);
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        .wishlist-popup .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            color: #555;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        .wishlist-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            position: relative; /* Додано для позиціонування кнопки видалення */
+        }
+
+        .wishlist-item img {
+            width: 80px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .wishlist-item-details {
+            flex-grow: 1;
+        }
+
+        .wishlist-item-details h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .wishlist-item-details p {
+            margin: 5px 0 0;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Стилі для нової кнопки видалення */
+        .delete-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #999;
+            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            transition: color 0.2s ease;
+        }
+
+        .delete-btn:hover {
+            color: #e74c3c;
+        }
+        
+        .wishlist-empty-message {
+            text-align: center;
+            color: #777;
+            font-style: italic;
+            margin-top: 50px;
+        }
+
+.clear-wishlist-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.clear-wishlist-btn:hover {
+    background-color: #27B0B0;
+}
+
+.clear-wishlist-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.clear-wishlist-btn:hover {
+    background-color: #27B0B0;
+}
+
+
+/* ========================================= */
+/* Адаптивний дизайн: Мобільні пристрої (< 768px)         */
+/* ========================================= */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .header .logo {
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    .center-nav {
+        margin-top: 0;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .center-nav a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    .cart-button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .games-grid,
+    .features-grid,
+    .free-games-grid,
+    .play-instantly-grid,
+    .action-open-world-grid,
+    .looter-shooters-grid,
+    .rpg-adventure-grid,
+    .shooters-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .feature-card {
+        padding: 15px;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .feature-card p {
+        font-size: 0.9rem;
+    }
+
+    .game-info .details h3 {
+        font-size: 0.9rem;
+    }
+
+    .game-info .details p {
+        font-size: 0.75rem;
+    }
+
+    .add-button {
+        font-size: 1.2rem;
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo-left,
+    .footer-logo-right {
+        display: none;
+    }
+
+    .footer-text {
+        margin: 0;
+    }
+}
+
+/* ========================================= */
+/* Адаптивний дизайн: Дуже маленькі екрани (< 576px)      */
+/* ========================================= */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .games-grid,
+    .features-grid,
+    .free-games-grid,
+    .play-instantly-grid,
+    .action-open-world-grid,
+    .looter-shooters-grid,
+    .rpg-adventure-grid,
+    .shooters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .free-games-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .free-games-header .timer-icon {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .footer-text p {
+        font-size: 0.8rem;
+    }
+    
+    .wishlist-popup {
+        width: 95%;
+        padding: 20px;
+    }
+}
+   

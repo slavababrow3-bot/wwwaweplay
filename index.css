@@ -1,0 +1,856 @@
+:root {
+    --bg-color: #EFFDFE;
+    --header-gradient-start: #CDF6DB;
+    --header-gradient-end: #32E0E0;
+    --primary-blue: #32E0E0;
+    --text-color: #555;
+    --card-bg: #fff;
+    --footer-text-color: #2F6D6D;
+    --border-color: #32E0E0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.backimg{
+    display:none;
+}
+
+.header {
+    background: linear-gradient(to right, var(--header-gradient-start), var(--header-gradient-end));
+    height: 87px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.header-container {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.header .logo {
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 80px;
+}
+
+.center-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-grow: 1;
+    margin-left: 150px;
+}
+
+.center-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.cart-button {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.hero-section h1 {
+    color: var(--primary-blue);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.bestsellers-section h2 {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.games-grid-container {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-left: 3rem;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    position: relative;
+    min-height: 320px;
+    transition: opacity 0.4s ease;
+}
+
+.games-grid.fade-out {
+    opacity: 0;
+}
+
+
+.game-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    flex: 1;
+}
+
+.game-card-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.game-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.game-card .overlay {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 1rem);
+    padding: 0 0.5rem;
+    z-index: 1;
+}
+
+.rating, .category-tag {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.category-tag {
+    background-color: var(--primary-blue);
+}
+
+.category-tag.enhanced {
+    background-color: #f7b32b;
+}
+
+.game-info {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    min-height: 80px;
+}
+
+.game-info .details h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.game-info .details p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.add-button {
+    background-color: #eee;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #777;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.add-button:hover {
+    background-color: var(--primary-blue);
+    color: white;
+    transform: scale(1.1);
+}
+
+
+.action-open-world-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.looter-shooters-grid, .rpg-adventure-grid, .shooters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.free-games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.play-instantly-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.strategy-puzzle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+.free-game-card .details p {
+    font-size: 0.9rem;
+}
+
+.free-game-card .free-date {
+    color: var(--primary-blue);
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .action-open-world-grid,
+    .looter-shooters-grid, .rpg-adventure-grid, .shooters-grid,
+    .free-games-grid, .play-instantly-grid, .strategy-puzzle-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .action-open-world-grid,
+    .looter-shooters-grid, .rpg-adventure-grid, .shooters-grid,
+    .free-games-grid, .play-instantly-grid, .strategy-puzzle-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.games-grid.fade-out {
+    opacity: 0;
+}
+
+.game-card img[src="Grand Theft Auto V Enhanced.jpg"] {
+    background-color: black;
+    object-fit: contain;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 210px;
+}
+
+.looter-shooters-section h2, .rpg-adventure-section h2, .shooters-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.more-button {
+    background-color: var(--primary-blue);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.features-section {
+    padding-top: 2rem;
+}
+
+.features-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    border: 3px solid var(--primary-blue);
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 200px;
+}
+
+.feature-card .icon {
+    background-color: #eee;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card .icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.feature-card h3 {
+    color: var(--primary-blue);
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+}
+
+.free-games-section {
+    background-color: var(--card-bg);
+    border: 3px solid var(--primary-blue);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.free-games-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.free-games-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.free-games-header h2 img {
+    height: 50px;
+}
+
+.free-games-header .timer-icon {
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+.free-games-grid .game-card:nth-child(n+4) {
+    margin-top: 1rem;
+}
+
+.play-instantly-section {
+    padding-top: 2rem;
+}
+
+.play-instantly-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.play-instantly-section h2 .rocket-icon {
+    height: 25px;
+    width: auto;
+}
+
+.play-instantly-section p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+.action-open-world-section {
+    padding-top: 2rem;
+}
+
+.action-open-world-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.footer {
+    width: 100%;
+    background: linear-gradient(to right, #CDF6DB, #32E0E0);
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-container {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.footer-logo {
+    height: 100px;
+}
+
+.footer-logo-right img {
+    width: 357px;
+    height: 91px;
+}
+
+.footer-logo-left img {
+    width: 128px;
+    height: 119px;
+}
+
+.footer-text {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-blue);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wishlist-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.wishlist-popup.open {
+    transform: translateX(0);
+}
+
+.wishlist-popup h2 {
+    color: var(--primary-blue);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.wishlist-popup .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: #555;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.wishlist-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.wishlist-item img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.wishlist-item-details {
+    flex-grow: 1;
+}
+
+.wishlist-item-details h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.wishlist-item-details p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    transition: color 0.2s ease;
+}
+
+.delete-btn:hover {
+    color: #e74c3c;
+}
+
+.wishlist-empty-message {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    margin-top: 50px;
+}
+
+.clear-wishlist-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.clear-wishlist-btn:hover {
+    background-color: #27B0B0;
+}
+
+.bestsellers-navigation {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.nav-button {
+    background: var(--primary-blue);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover:not(:disabled) {
+    background: #28C8C8;
+    transform: scale(1.1);
+}
+
+.nav-button:disabled {
+    background: #b0eaea;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.page-indicator {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: bold;
+    min-width: 80px;
+    text-align: center;
+}
+
+.search-container {
+    position: relative;
+    width: 500px;
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(50, 224, 224, 0.2);
+}
+
+.search-input-wrapper:focus-within {
+    border-color: #32E0E0;
+    box-shadow: 0 4px 20px rgba(50, 224, 224, 0.3);
+    transform: translateY(-2px);
+}
+
+#search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    padding: 8px;
+    outline: none;
+    font-family: inherit;
+}
+
+#search-input::placeholder {
+    color: #999;
+    font-weight: 300;
+}
+
+#search-button {
+    background: #32E0E0;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+#search-button:hover {
+    background: #28C8C8;
+    transform: scale(1.05);
+}
+
+#search-button:active {
+    transform: scale(0.95);
+}
+
+#search-button img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.search-categories {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 10px;
+    display: none;
+    flex-wrap: wrap;
+    gap: 8px;
+    z-index: 1000;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+}
+
+.search-categories .category-tag {
+    cursor: pointer;
+    padding: 8px 15px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.search-categories .category-tag:hover {
+    background: #32E0E0;
+    color: white;
+    border-color: #32E0E0;
+    transform: translateY(-2px);
+}
+
+.search-container:hover .search-categories,
+.search-input-wrapper:focus-within ~ .search-categories {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.highlighted-section {
+    animation: highlight 2s ease;
+    border: 2px solid #32E0E0;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(50, 224, 224, 0.1) 0%, rgba(50, 224, 224, 0.05) 100%);
+}
+
+@keyframes highlight {
+    0% { 
+        background: linear-gradient(135deg, rgba(50, 224, 224, 0.2) 0%, rgba(50, 224, 224, 0.1) 100%);
+        transform: scale(1.01);
+    }
+    50% { 
+        background: linear-gradient(135deg, rgba(50, 224, 224, 0.3) 0%, rgba(50, 224, 224, 0.15) 100%);
+        transform: scale(1.02);
+    }
+    100% { 
+        background: linear-gradient(135deg, rgba(50, 224, 224, 0.1) 0%, rgba(50, 224, 224, 0.05) 100%);
+        transform: scale(1);
+    }
+}
+
+
+.strategy-puzzle-section {
+    padding-top: 2rem;
+}
+
+.strategy-puzzle-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.free-games-header img[src*="gift.png"],
+.free-games-header img[src*="ogift.png"] {
+    transition: transform 0.2s ease;
+}
+
+.free-games-header img[src*="gift.png"]:hover,
+.free-games-header img[src*="ogift.png"]:hover {
+    transform: scale(1.1);
+}
+
+.no-underline {
+    text-decoration: none;
+}
